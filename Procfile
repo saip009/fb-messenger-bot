@@ -1,1 +1,1 @@
-web: gunicorn echoserver.py:app
+web: gunicorn echoserver:app
