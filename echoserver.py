@@ -4,12 +4,12 @@ import requests
 
 app = Flask(__name__)
 
-PAT = 'EAACCe0a9LrMBAHUVZAzh3xoglssjH8DIsP9uN7qGjOYtnjNRxUVWD5oR7ofqQUZCkKo764ZAEeT0WCONnsx8JT3lUvDNjAxd9F39CUA5j6FZCdUZCDqYJo4gBzlZA2ae3ZAD6Fo9cFln4gc1Int0Cex2E3MOBNHltkSLCQHzFt2FQZDZD'
+PAT = ''	#FB Pace Access Token
 
 @app.route('/', methods=['GET'])
 def handle_verification():
   print "Handling Verification: ->"
-  if request.args.get('hub.verify_token', '') == 'my_voice_is_my_password_verify_me':
+  if request.args.get('hub.verify_token', '') == '':		#FB Verification Token
     print "Verification successful!"
     return request.args.get('hub.challenge', '')
   else:
